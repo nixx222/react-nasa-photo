@@ -1,0 +1,50 @@
+/* Full-page grid container */
+#app-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, content, footer layout */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Center title section content */
+#title-section {
+    border: 2px solid black;
+    padding: 50px;
+    width: fit-content; /* Shrinks the width to fit the content */
+    margin: 20px auto; /* Centers the box horizontally */
+    text-align: center;
+}
+
+
+/* NASA Photos container styling */
+#nasa-photos-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    justify-items: center; /* Centers photos horizontally */
+}
+
+/* Media query for grid layout adjustment */
+@media (min-width: 768px) {
+    #nasa-photos-container {
+        grid-template-columns: 1fr 1fr; /* Two columns for larger screens */
+    }
+}
+
+/* Individual photo styling */
+.photo {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Reset button styling */
+#reset-button {
+    justify-self: center; /* Center horizontally in grid */
+    margin: 20px; /* Add some spacing */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
